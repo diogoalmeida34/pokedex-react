@@ -1,0 +1,102 @@
+/* ----------------------------------------
+   1. Estilo base para todos os cards
+----------------------------------------- */
+.pokecard-container {
+  background: #ffffff;
+  border: 2px solid #cc0000;
+  border-radius: 15px;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin: 16px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s;
+  min-height: 350px; /* Altura mínima para padronizar o tamanho */
+}
+
+.pokecard-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------------------------------
+   2. Estilo adicional para card favoritado
+----------------------------------------- */
+.pokecard-container.favorito {
+  background: #fffbe6;
+  border-color: gold;
+}
+
+/* ----------------------------------------
+   3. Estilização do conteúdo interno
+----------------------------------------- */
+.pokecard-nome {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: #cc0000;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.pokecard-imagem {
+  display: block;
+  margin: 0 auto 12px;
+  height: 120px;
+  filter: drop-shadow(0 0 3px #cc0000);
+}
+
+.pokecard-info {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.tipo-lista {
+  text-transform: capitalize;
+}
+
+/* ----------------------------------------
+   4. Botões (favoritar/desfavoritar)
+----------------------------------------- */
+.pokecard-botao {
+  padding: 8px 16px;
+  background: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 10%;
+}
+
+.pokecard-botao:hover {
+  background: #aa0000;
+}
+
+.pokecard-botao.desfavoritar {
+  background: #999;
+}
+
+/* ----------------------------------------
+   5. Estrela de favorito com animação
+----------------------------------------- */
+.star {
+  color: gold;
+  animation: shine 0.5s ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}

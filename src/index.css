@@ -1,0 +1,116 @@
+:root {
+  font-family: 'Poppins', sans-serif; /* Fonte mais moderna e amigável */
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121212; /* Um fundo escuro mais suave, com contraste elegante */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #2b2d42; /* Azul escuro suave */
+}
+
+h1 {
+  font-size: 4em;
+  line-height: 1.1;
+  color: #5d6d7e; /* Cor mais fria, remanescente ao tipo Psíquico, calma e elegante */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombras suaves para dar destaque ao título */
+  font-family: 'Pokemon', sans-serif; /* Fonte personalizada (se você tiver uma disponível) */
+}
+
+a {
+  font-weight: 600;
+  color: #1d8a8a; /* Azul mais claro e tranquilo, associado ao tipo Água */
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4dd0e1; /* Azul mais claro ao passar o mouse */
+}
+
+button {
+  border-radius: 8px;
+  border: 2px solid #1d8a8a; /* Azul mais claro, inspirado no tipo Água */
+  padding: 0.8em 1.5em;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ffffff;
+  color: #1d8a8a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #1d8a8a;
+  color: #ffffff;
+  border-color: #1d8a8a;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  body {
+    background-color: #f0f4f8; /* Fundo suave claro */
+  }
+
+  a:hover {
+    color: #4dd0e1; /* Azul claro ao passar o mouse no modo claro */
+  }
+
+  button {
+    background-color: #f9f9f9;
+    border: 2px solid #1d8a8a; /* Azul mais suave para o modo claro */
+  }
+}
+
+#pokebola-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.pokebola-image {
+  width: 5%; /* Ajuste o tamanho conforme necessário */
+  height: 5%;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
